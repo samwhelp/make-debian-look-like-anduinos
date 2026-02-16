@@ -47,6 +47,7 @@ REF_GNOME_SHELL_EXTENSIONS_DISABLE=(
 	"places-menu@gnome-shell-extensions.gcampax.github.com"
 	"window-list@gnome-shell-extensions.gcampax.github.com"
 	"dash-to-dock@micxgx.gmail.com"
+	"ubuntu-dock@ubuntu.com"
 )
 
 
@@ -99,6 +100,41 @@ is_command_exist () {
 ##
 ## ## Model
 ##
+
+
+
+
+##
+## ## Model / Package
+##
+
+mod_package_master_install () {
+
+	sys_package_install
+
+	sys_package_remove
+
+}
+
+sys_package_install () {
+
+	echo
+	echo
+	echo sudo apt-get install gnome-shell gnome-shell-extension-manager gir1.2-gmenu-3.0 git sassc
+	sudo apt-get install gnome-shell gnome-shell-extension-manager gir1.2-gmenu-3.0 git sassc
+
+}
+
+sys_package_remove () {
+
+	return 0
+
+	echo
+	echo
+	echo sudo apt-get remove gnome-shell-extension-ubuntu-dock
+	sudo apt-get remove gnome-shell-extension-ubuntu-dock
+
+}
 
 
 
@@ -999,6 +1035,8 @@ sys_gnome_shell_extensions_disable () {
 
 sys_gnome_shell_extensions_config () {
 
+	sys_gnome_shell_extensions_config_for_dash_to_dock
+
 	sys_gnome_shell_extensions_config_for_dash_to_panel
 
 	sys_gnome_shell_extensions_config_for_arcmenu
@@ -1008,6 +1046,40 @@ sys_gnome_shell_extensions_config () {
 	sys_gnome_shell_extensions_config_for_blur_my_shell
 
 	return
+}
+
+sys_gnome_shell_extensions_config_for_dash_to_dock () {
+
+dconf load / << __EOF__
+
+
+[org/gnome/shell/extensions/dash-to-dock]
+apply-custom-theme=false
+autohide=false
+autohide-in-fullscreen=true
+background-color='#ffffff'
+background-opacity=0.80000000000000004
+click-action='cycle-windows'
+dash-max-icon-size=36
+dock-fixed=true
+dock-position='BOTTOM'
+extend-height=false
+isolate-locations=true
+middle-click-action='launch'
+scroll-action='cycle-windows'
+shift-click-action='previews'
+shift-middle-click-action='quit'
+shortcut=['']
+shortcut-text=''
+show-mounts=false
+show-show-apps-button=true
+show-trash=false
+show-windows-preview=false
+transparency-mode='DYNAMIC'
+
+
+__EOF__
+
 }
 
 sys_gnome_shell_extensions_config_for_dash_to_panel () {
@@ -1034,6 +1106,8 @@ scroll-panel-action='SWITCH_WORKSPACE'
 shortcut=['<Super>0']
 shortcut-text='<Super>0'
 show-window-previews=false
+stockgs-keep-dash=false
+stockgs-keep-top-panel=false
 taskbar-locked=false
 window-preview-title-position='TOP'
 
@@ -1064,10 +1138,10 @@ menu-item-grid-icon-size='Default'
 menu-item-icon-size='Large'
 menu-layout='Whisker'
 override-menu-theme=false
-position-in-panel='Left'
+position-in-panel='Center'
 prefs-visible-page=0
 searchbar-default-top-location='Bottom'
-show-activities-button=false
+show-activities-button=true
 vert-separator=true
 
 
@@ -1286,6 +1360,8 @@ mod_gnome_shell_master_layout_install () {
 }
 
 mod_gnome_shell_master_install () {
+
+	mod_package_master_install
 
 	mod_gnome_shell_master_config_install
 
