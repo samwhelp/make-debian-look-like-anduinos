@@ -96,14 +96,9 @@ is_command_exist () {
 
 
 
-
 ##
 ## ## Model
 ##
-
-
-
-
 
 
 
@@ -898,35 +893,6 @@ __EOF__
 
 
 ##
-## ## Model / Tips
-##
-
-sys_tips_on_done_v1 () {
-
-cat << __EOF__
-
-##
-## ## Done
-##
-## It's done.
-##
-## Please check.
-##
-## For Example:
-##
-## * 'Super + w' to Maximize Window.
-## * 'gsettings list-recursively | grep keybind' to see config via gsettings
-## * 'dconf dump / | less' to see config via dconf
-##
-
-__EOF__
-
-}
-
-
-
-
-##
 ## ## Portal
 ##
 
@@ -948,8 +914,9 @@ mod_gnome_shell_master_config_install_main () {
 
 mod_gnome_shell_master_config_install_done () {
 
-	sys_tips_on_done
+	#sys_tips_on_done
 
+	return 0
 }
 
 mod_gnome_shell_master_config_install () {
@@ -1254,6 +1221,14 @@ cat << __EOF__
 ## \`\`\` sh
 ## gnome-session-quit
 ## \`\`\`
+##
+## Please check.
+##
+## For Example:
+##
+## * 'Super + w' to Maximize Window.
+## * 'gsettings list-recursively | grep keybind' to see config via gsettings
+## * 'dconf dump / | less' to see config via dconf
 ##
 
 __EOF__
