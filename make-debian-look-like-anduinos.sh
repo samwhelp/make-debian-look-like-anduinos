@@ -157,6 +157,12 @@ mod_theme_master_install () {
 
 sys_theme_install_fluent_gtk_theme () {
 
+	sys_theme_install_fluent_gtk_theme_via_git
+
+}
+
+sys_theme_install_fluent_gtk_theme_via_git () {
+
 
 	if [ -e "${HOME}/.themes/Fluent" ]; then
 		return 0
@@ -169,7 +175,7 @@ sys_theme_install_fluent_gtk_theme () {
 	cd /tmp/fluent-gtk-theme
 
 
-	./install.sh -t all
+	./install.sh --tweaks noborder round --theme all
 
 
 	cd "${OLDPWD}"
@@ -177,6 +183,12 @@ sys_theme_install_fluent_gtk_theme () {
 }
 
 sys_theme_install_fluent_icon_theme () {
+
+	sys_theme_install_fluent_icon_theme_via_git
+
+}
+
+sys_theme_install_fluent_icon_theme_via_git () {
 
 
 	if [ -e "${HOME}/.local/share/icons/Fluent" ]; then
@@ -190,13 +202,12 @@ sys_theme_install_fluent_icon_theme () {
 	cd /tmp/fluent-icon-theme
 
 
-	./install.sh -a
+	./install.sh --all
 
 
 	cd "${OLDPWD}"
 
 }
-
 
 sys_theme_install_wallpaper () {
 
