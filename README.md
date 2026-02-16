@@ -2,6 +2,11 @@
 
 # make-debian-look-like-anduinos
 
+
+
+
+## Home
+
 > [make-debian-look-like-anduinos](https://samwhelp.github.io/make-debian-look-like-anduinos/)
 
 
@@ -18,7 +23,7 @@
 ## Howto
 
 
-### Howto download [make-debian-look-like-anduinos.sh](https://github.com/samwhelp/make-debian-look-like-anduinos/blob/main/make-debian-look-like-anduinos.sh) and run [it](https://raw.githubusercontent.com/samwhelp/make-debian-look-like-anduinos/refs/heads/main/make-debian-look-like-anduinos.sh).
+### How to download [make-debian-look-like-anduinos.sh](https://github.com/samwhelp/make-debian-look-like-anduinos/blob/main/make-debian-look-like-anduinos.sh) and run [it](https://raw.githubusercontent.com/samwhelp/make-debian-look-like-anduinos/refs/heads/main/make-debian-look-like-anduinos.sh).
 
 > run
 
