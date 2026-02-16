@@ -23,22 +23,24 @@
 ##
 
 REF_GNOME_SHELL_EXTENSIONS_INSTALL=(
-	"blur-my-shell@aunetx"
-	"arcmenu@arcmenu.com"
-	"date-menu-formatter@marcinjakubowski.github.com"
 	"dash-to-panel@jderose9.github.com"
+	"arcmenu@arcmenu.com"
+	"blur-my-shell@aunetx"
+	"date-menu-formatter@marcinjakubowski.github.com"
+	"user-theme@gnome-shell-extensions.gcampax.github.com"
+	"status-icons@gnome-shell-extensions.gcampax.github.com"
 )
 
 
 
 
 REF_GNOME_SHELL_EXTENSIONS_ENABLE=(
+	"dash-to-panel@jderose9.github.com"
+	"arcmenu@arcmenu.com"
+	"blur-my-shell@aunetx"
+	"date-menu-formatter@marcinjakubowski.github.com"
 	"user-theme@gnome-shell-extensions.gcampax.github.com"
 	"status-icons@gnome-shell-extensions.gcampax.github.com"
-	"blur-my-shell@aunetx"
-	"arcmenu@arcmenu.com"
-	"date-menu-formatter@marcinjakubowski.github.com"
-	"dash-to-panel@jderose9.github.com"
 )
 
 
