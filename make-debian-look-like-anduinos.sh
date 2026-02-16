@@ -157,11 +157,11 @@ mod_theme_master_install () {
 
 sys_theme_install_fluent_gtk_theme () {
 
-	sys_theme_install_fluent_gtk_theme_via_git
+	sys_theme_install_fluent_gtk_theme_via_git_clone
 
 }
 
-sys_theme_install_fluent_gtk_theme_via_git () {
+sys_theme_install_fluent_gtk_theme_via_git_clone () {
 
 
 	if [ -e "${HOME}/.themes/Fluent" ]; then
@@ -184,11 +184,11 @@ sys_theme_install_fluent_gtk_theme_via_git () {
 
 sys_theme_install_fluent_icon_theme () {
 
-	sys_theme_install_fluent_icon_theme_via_git
+	sys_theme_install_fluent_icon_theme_via_git_clone
 
 }
 
-sys_theme_install_fluent_icon_theme_via_git () {
+sys_theme_install_fluent_icon_theme_via_git_clone () {
 
 
 	if [ -e "${HOME}/.local/share/icons/Fluent" ]; then
