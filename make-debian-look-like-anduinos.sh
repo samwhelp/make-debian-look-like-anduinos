@@ -207,6 +207,17 @@ sys_theme_install_fluent_icon_theme_via_git () {
 
 	cd "${OLDPWD}"
 
+
+
+
+	cd /tmp/fluent-icon-theme/cursors
+
+
+	./install.sh
+
+
+	cd "${OLDPWD}"
+
 }
 
 sys_theme_install_wallpaper () {
