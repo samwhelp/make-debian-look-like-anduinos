@@ -53,7 +53,6 @@ REF_GNOME_SHELL_EXTENSIONS_DISABLE=(
 	"places-menu@gnome-shell-extensions.gcampax.github.com"
 	"window-list@gnome-shell-extensions.gcampax.github.com"
 	"dash-to-dock@micxgx.gmail.com"
-	"ubuntu-dock@ubuntu.com"
 )
 
 
@@ -125,8 +124,8 @@ mod_package_master_install () {
 sys_package_install () {
 
 	echo
-	echo
 	echo sudo apt-get install -y gnome-shell gnome-tweaks gnome-shell-extension-manager gir1.2-gmenu-3.0 git wget sassc
+	echo
 	sudo apt-get install -y gnome-shell gnome-tweaks gnome-shell-extension-manager gir1.2-gmenu-3.0 git wget sassc
 
 }
@@ -134,11 +133,6 @@ sys_package_install () {
 sys_package_remove () {
 
 	return 0
-
-	echo
-	echo
-	echo sudo apt-get remove gnome-shell-extension-ubuntu-dock
-	sudo apt-get remove gnome-shell-extension-ubuntu-dock
 
 }
 
