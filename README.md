@@ -111,7 +111,7 @@ Search: [fluent](https://github.com/vinceliuice?tab=repositories&q=fluent&type=&
 
 | Logo |
 | ---- |
-| [/usr/share/images/anduinos/logo.svg](https://github.com/Anduin2017/AnduinOS/blob/1.5/src/mods/30-gnome-extension-arcmenu-patch/logo.svg) |
+| [/usr/share/images/anduinos/logo.svg](https://github.com/Anduin2017/AnduinOS/blob/1.5/src/mods/34-gnome-extension-arcmenu-patch/logo.svg) |
 
 
 > This for ArcMenu Button Icon
